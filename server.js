@@ -8,7 +8,7 @@ const { WebSocketServer, WebSocket } = require('ws');
 
 const PORT = Number(process.env.PORT || 10000);
 const HOST = '0.0.0.0';
-const PUBLIC_DIR = path.join(__dirname, 'public');
+const PUBLIC_DIR = __dirname;
 const rooms = new Map();
 const ALLOWED_EVENTS = new Set(['go', 'hit', 'hitAck', 'spHit', 'special', 'mini', 'rnd']);
 const MAX_ROOM_PEERS = 8;
